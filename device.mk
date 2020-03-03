@@ -97,9 +97,6 @@ PRODUCT_PACKAGES += \
 # Generic Kernel Headers
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
-# GSI keys
-$(call inherit-product, build/make/target/product/gsi_keys.mk)
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
