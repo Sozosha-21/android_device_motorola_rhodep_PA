@@ -67,6 +67,7 @@ BOARD_KERNEL_CMDLINE := \
     msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=0 
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE    := 4096
+BOARD_RAMDISK_USE_LZ4 := true
 
 # Partitions - A/B
 AB_OTA_UPDATER := true
