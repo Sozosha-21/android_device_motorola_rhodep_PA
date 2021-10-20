@@ -110,5 +110,8 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 BOARD_VNDK_VERSION := current
 
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
+
 # Proprietary Vendor
 $(call inherit-product, vendor/motorola/corfur/corfur-vendor.mk)
