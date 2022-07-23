@@ -77,6 +77,11 @@ TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 # GSI keys
 $(call inherit-product, build/make/target/product/gsi_keys.mk)
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-service
+
 # Init
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
