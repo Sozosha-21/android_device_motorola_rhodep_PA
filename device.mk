@@ -76,6 +76,11 @@ PRODUCT_PACKAGES += \
 # FM
 BOARD_HAVE_QCOM_FM := false
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0 \
+    android.hardware.gatekeeper@1.0.vendor
+
 # Generic Kernel Headers
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
