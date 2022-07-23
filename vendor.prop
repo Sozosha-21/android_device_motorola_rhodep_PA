@@ -17,3 +17,6 @@ ro.soc.manufacturer=QTI
 # Radio
 persist.vendor.radio.fetchqos=true
 persist.vendor.rcs.singlereg.feature = 1
+
+# SPU
+vendor.gatekeeper.disable_spu=true
