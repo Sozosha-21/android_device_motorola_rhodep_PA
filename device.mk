@@ -119,6 +119,10 @@ PRODUCT_PACKAGES += \
 # Manifests
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 
+# Neural networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
+
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
