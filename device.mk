@@ -119,6 +119,7 @@ PRODUCT_COPY_FILES += $(DEVICE_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.default \
+    init.corfur.perf.rc \
     init.mmi.boot.sh \
     init.mmi.charge_only.rc \
     init.mmi.chipset.rc \
