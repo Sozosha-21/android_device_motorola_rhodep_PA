@@ -79,6 +79,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
+TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/configs/mot_aids.fs
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
