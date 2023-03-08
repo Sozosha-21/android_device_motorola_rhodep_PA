@@ -222,6 +222,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCorfur \
     FrameworksResCorfur \
     SettingsProviderResCorfur \
+    SettingsResCorfur \
     TelephonyResCorfur
 
 # Partitions - Dynamic
