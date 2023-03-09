@@ -163,6 +163,10 @@ PRODUCT_PACKAGES += \
 # Manifests
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 
+# Moto Actions
+PRODUCT_PACKAGES += \
+    MotoActions
+
 # Neural networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
