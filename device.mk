@@ -136,6 +136,10 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
+# Overlays
+PRODUCT_PACKAGES += \
+    SettingsProviderResCorfur
+
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
