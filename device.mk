@@ -155,6 +155,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    CarrierConfigResCorfur \
     SettingsProviderResCorfur
 
 # Partitions - Dynamic
