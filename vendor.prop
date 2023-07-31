@@ -1,0 +1,19 @@
+# Bluetooth
+vendor.qcom.bluetooth.soc=hastings
+
+# Camera
+camera.disable_zsl_mode=1
+
+# Crypto
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.metadata.method=dm-default-key
+
+# FS
+ro.incremental.enable=yes
+
+# QTI
+ro.soc.manufacturer=QTI
+
+# Radio
+persist.vendor.radio.fetchqos=true
+persist.vendor.rcs.singlereg.feature = 1
