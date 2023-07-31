@@ -6,6 +6,11 @@
 
 DEVICE_PATH := device/motorola/corfur
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := 420dpi
+PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
+
 # A/B
 PRODUCT_PACKAGES += \
     update_engine \
