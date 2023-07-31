@@ -69,6 +69,9 @@ BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_RAMDISK_USE_LZ4 := true
 
+# OTA Assert
+TARGET_OTA_ASSERT_DEVICE := corfur
+
 # Partitions - A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
