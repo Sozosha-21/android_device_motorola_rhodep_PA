@@ -1,0 +1,23 @@
+//
+//  Copyright (C) 2023 Paranoid Android
+//
+//  SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "charger_fstab.qti",
+    src: "charger_fstab.qti",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.default",
+    src: "fstab.default",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.early_init.sh",
+    src: "init.qti.early_init.sh",
+    vendor: true,
+}

@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DEVICE_PATH := device/motorola/corfur
+
 # A/B
 PRODUCT_PACKAGES += \
     update_engine \
@@ -38,7 +40,7 @@ BOARD_AVB_ENABLE := true
 
 # Bootloader
 TARGET_BOARD_PLATFORM := holi
-TARGET_BOOTLOADER_BOARD_NAME := holi
+TARGET_BOOTLOADER_BOARD_NAME := corfur
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -76,7 +78,7 @@ TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 $(call inherit-product, build/make/target/product/gsi_keys.mk)
 
 # Init
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
+PRODUCT_COPY_FILES += $(DEVICE_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
 PRODUCT_PACKAGES += \
     charger_fstab.qti \
@@ -87,7 +89,7 @@ KERNEL_MODULES_INSTALL := dlkm
 KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/corfur/$(KERNEL_MODULES_INSTALL)/lib/modules
 
 # Manifests
-DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/configs/vintf/manifest.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
@@ -96,6 +98,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := all
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH)
+
 # Storage
 PRODUCT_CHARACTERISTICS := nosdcard
 
@@ -103,3 +109,6 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 BOARD_VNDK_VERSION := current
+
+# Proprietary Vendor
+$(call inherit-product, vendor/motorola/corfur/corfur-vendor.mk)

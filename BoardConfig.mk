@@ -50,7 +50,21 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 # Kernel
 BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
 BOARD_KERNEL_BASE        := 0x00000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=4e00000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1
+BOARD_KERNEL_CMDLINE := \
+    androidboot.console=ttyMSM0 \
+    androidboot.hab.cid=50 \
+    androidboot.hab.csv=11 \
+    androidboot.hab.product=corfur \
+    androidboot.hardware=qcom \
+    androidboot.memcg=1 \
+    androidboot.usbcontroller=4e00000.dwc3 \
+    cgroup.memory=nokmem,nosocket \
+    console=ttyMSM0,115200n8 \
+    earlycon=msm_geni_serial,0x04C8C000 \
+    firmware_class.path=/vendor/firmware_mnt/image \
+    iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 \
+    lpm_levels.sleep_disabled=1 loop.max_part=7 \
+    msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=0 
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE    := 4096
 
@@ -93,12 +107,12 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Partitions - Sizes
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x06000000
-BOARD_DTBOIMG_PARTITION_SIZE := 0x0800000
+BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
+BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 32)
-BOARD_SUPER_PARTITION_SIZE := 12884901888
-BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
-BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 0x06000000
+BOARD_SUPER_PARTITION_SIZE := 14512291840
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 7255617536
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 
 # Radio
 ADD_RADIO_FILES := false
@@ -106,7 +120,8 @@ ADD_RADIO_FILES := false
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
-TARGET_RECOVERY_FSTAB := device/motorola/corfur/init/fstab.default
+TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 
 # UFS
 #namespace definition for librecovery_updater
