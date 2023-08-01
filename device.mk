@@ -225,7 +225,8 @@ PRODUCT_PACKAGES += \
     SettingsProviderResCorfur \
     SettingsResCorfur \
     SystemUIResCorfur \
-    TelephonyResCorfur
+    TelephonyResCorfur \
+    WifiResTargetDubai
 
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
