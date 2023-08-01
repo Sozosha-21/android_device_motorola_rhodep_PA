@@ -223,6 +223,7 @@ PRODUCT_PACKAGES += \
     FrameworksResCorfur \
     SettingsProviderResCorfur \
     SettingsResCorfur \
+    SystemUIResCorfur \
     TelephonyResCorfur
 
 # Partitions - Dynamic
