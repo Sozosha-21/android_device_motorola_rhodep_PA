@@ -221,6 +221,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfigResCorfur \
     FrameworksResCorfur \
+    FrameworksResCorfurAOSPA \
     SettingsProviderResCorfur \
     SettingsResCorfur \
     SystemUIResCorfur \
