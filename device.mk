@@ -340,9 +340,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     vendor/qcom/opensource/data-ipa-cfg-mgr-legacy
 
-# Storage
-PRODUCT_CHARACTERISTICS := nosdcard
-
 # System Helper
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0.vendor
