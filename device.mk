@@ -220,6 +220,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigResCorfur \
+    FrameworksResCorfur \
     SettingsProviderResCorfur \
     TelephonyResCorfur
 
