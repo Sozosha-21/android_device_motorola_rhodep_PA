@@ -17,12 +17,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "fstab.default",
-    src: "fstab.default",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.corfur.perf.rc",
     src: "init.corfur.perf.rc",
     sub_dir: "init",
