@@ -125,7 +125,8 @@ PRODUCT_PACKAGES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor
+    android.hardware.biometrics.fingerprint@2.1.vendor \
+    com.motorola.hardware.biometric.fingerprint@1.0.vendor
 
 # FM
 BOARD_HAVE_QCOM_FM := false
@@ -217,6 +218,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
+# NFC
+TARGET_USES_ST_AIDL_NFC := true
+$(call inherit-product, hardware/st/nfc/nfc_vendor_product.mk)
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf
+
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2.vendor \
+    com.android.nfc_extras \
+    libchrome.vendor \
+    NfcNci \
+    SecureElement \
+    Tag
+
 # Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigResCorfur \
@@ -306,8 +322,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelper@1.0.vendor
 
 # Telephony
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/telephony/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
+#PRODUCT_COPY_FILES += \
+#    $(DEVICE_PATH)/configs/telephony/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
