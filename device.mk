@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/motorola/rhodep
+COMMON_SEPOLICY_PATH := device/qcom/common/sepolicy
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal

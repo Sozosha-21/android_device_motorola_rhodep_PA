@@ -204,9 +204,15 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.default
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy/vendor
-
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_SEPOLICY_PATH)/common/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_SEPOLICY_PATH)/common/public
 PRODUCT_PRIVATE_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy/private
+
+ifneq ($(AOSPA_BUILD),)
+    SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+        $(COMMON_SEPOLICY_PATH)/aospa/private
+endif
 
 # UFS
 #namespace definition for librecovery_updater
