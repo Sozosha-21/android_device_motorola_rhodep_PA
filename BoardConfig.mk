@@ -115,8 +115,6 @@ BOARD_VENDOR_KERNEL_MODULES := \
 	$(KERNEL_MODULES_OUT)/wl2864c.ko \
 	$(KERNEL_MODULES_OUT)/wl2866d.ko \
 	$(KERNEL_MODULES_OUT)/cci_intf.ko \
-	$(KERNEL_MODULES_OUT)/sensors_class.ko \
-	$(KERNEL_MODULES_OUT)/mmi_relay.ko \
 	$(KERNEL_MODULES_OUT)/touchscreen_mmi.ko \
 	$(KERNEL_MODULES_OUT)/focaltech_v2_mmi.ko \
 	$(KERNEL_MODULES_OUT)/st21nfc.ko \
@@ -142,12 +140,11 @@ AB_OTA_PARTITIONS := \
       vbmeta \
       vbmeta_system \
       vendor \
-      vendor_boot \
-      vendor_dlkm
+      vendor_boot
 
 # Partitions - Dynamic
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
-BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
+BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
 
 # Partitions - Filesystems
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
@@ -156,7 +153,6 @@ BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Partitions - Metadata
@@ -166,7 +162,6 @@ TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Partitions - Sizes
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
