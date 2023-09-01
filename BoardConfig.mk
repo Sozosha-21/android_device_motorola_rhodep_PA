@@ -68,6 +68,8 @@ BOARD_KERNEL_CMDLINE := \
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_RAMDISK_USE_LZ4 := true
+KERNEL_CUSTOM_LLVM := true
+KERNEL_FULL_LLVM := true
 KERNEL_DEFCONFIG := corfur-qgki_defconfig
 
 BOARD_VENDOR_KERNEL_MODULES := \
@@ -112,6 +114,7 @@ BOARD_VENDOR_KERNEL_MODULES := \
 	$(KERNEL_MODULES_OUT)/watchdogtest.ko \
 	$(KERNEL_MODULES_OUT)/qpnp_adaptive_charge.ko \
 	$(KERNEL_MODULES_OUT)/fpc1020_mmi.ko \
+	$(KERNEL_MODULES_OUT)/goodix_fod_mmi.ko \
 	$(KERNEL_MODULES_OUT)/wl2864c.ko \
 	$(KERNEL_MODULES_OUT)/wl2866d.ko \
 	$(KERNEL_MODULES_OUT)/cci_intf.ko \
