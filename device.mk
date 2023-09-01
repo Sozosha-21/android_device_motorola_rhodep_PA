@@ -124,7 +124,7 @@ PRODUCT_PACKAGES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor \
+    android.hardware.biometrics.fingerprint@2.1-service \
     com.motorola.hardware.biometric.fingerprint@1.0.vendor
 
 # FM
@@ -204,7 +204,7 @@ PRODUCT_PACKAGES += \
 
 # Manifests
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
-
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/corfur_vendor_framework_compatibility_matrix.xml
 # Moto Actions
 PRODUCT_PACKAGES += \
     MotoActions

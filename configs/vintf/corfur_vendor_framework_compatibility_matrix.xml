@@ -1,0 +1,36 @@
+<!--
+	Copyright (C) 2023 Paranoid Android
+	SPDX-License-Identifier: Apache-2.0
+-->
+<compatibility-matrix version="4.0" type="framework">
+    <!-- Fingerprint -->
+    <hal format="hidl" override="true">
+        <name>com.motorola.hardware.biometric.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMotoFingerPrint</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IMotoFingerPrintSensorTest</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
+        <version>2.1</version>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.fingerprint</name>
+        <version>1.0</version>
+        <interface>
+            <name>IQtiExtendedFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>    
+</compatibility-matrix>
