@@ -4,7 +4,7 @@
 -->
 <compatibility-matrix version="4.0" type="framework">
     <!-- Fingerprint -->
-    <hal format="hidl" override="true">
+    <hal format="hidl" optional="true">
         <name>com.motorola.hardware.biometric.fingerprint</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
