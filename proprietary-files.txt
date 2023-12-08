@@ -628,7 +628,19 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 
-# Fingerprint
+# Fingerprint (goodix)
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice
+vendor/bin/hw/goodix_ident:vendor/bin/goodix_ident
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-goodixservice.rc
+vendor/firmware/goodix_cfg_group.bin
+vendor/firmware/goodix_firmware.bin
+vendor/lib64/hw/fingerprint.goodix.default.so
+vendor/lib64/libgf_ca.so
+vendor/lib64/libgf_hal.so
+vendor/lib64/libgoodixhwfingerprint.so
+vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@3.0.so
+
+# Fingerprint (fpc)
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
 vendor/bin/hw/fpc_ident:vendor/bin/fpc_ident
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc

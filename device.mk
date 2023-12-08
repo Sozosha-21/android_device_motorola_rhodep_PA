@@ -178,7 +178,6 @@ PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
     init.mmi.rc \
     init.mmi.touch.sh \
-    init.oem.fingerprint.overlay.sh \
     init.oem.fingerprint2.sh \
     init.oem.hw.sh \
     init.qcom.sensors.sh \

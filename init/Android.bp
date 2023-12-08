@@ -64,12 +64,6 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.oem.fingerprint.overlay.sh",
-    src: "init.oem.fingerprint.overlay.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.oem.fingerprint2.sh",
     src: "init.oem.fingerprint2.sh",
     vendor: true,
