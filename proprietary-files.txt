@@ -413,7 +413,6 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # Diag
 system_ext/lib64/vendor.qti.diaghal@1.0.so
-system_ext/lib/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
 -vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
@@ -431,12 +430,17 @@ vendor/etc/qdcm_calib_data_nt36672e_fhd_plus_144Hz_video_panel.xml
 vendor/lib64/libhdr_stub.so
 vendor/lib64/libhdr_tm.so
 
-# DPM
+# DPM - from rtwo
+system/framework/tcmclient.jar
 system_ext/bin/dpmd
+system_ext/bin/hw/motorola.hardware.tcmd@1.0-service
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/init/dpmd.rc
+system_ext/etc/init/motorola.hardware.tcmd@1.0-service.rc
 system_ext/etc/permissions/com.qti.dpmframework.xml
 system_ext/etc/permissions/dpmapi.xml
+system_ext/etc/seccomp_policy/tcmd.policy
+system_ext/etc/vintf/manifest/motorola.hardware.tcmd@1.0-service.xml
 system_ext/framework/com.qti.dpmframework.jar
 system_ext/framework/dpmapi.jar
 system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
@@ -445,13 +449,10 @@ system_ext/lib64/libdpmfdmgr.so
 system_ext/lib64/libdpmframework.so
 system_ext/lib64/libdpmtcm.so
 system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so
-system_ext/lib/com.qualcomm.qti.dpm.api@1.0.so
-system_ext/lib/libdpmctmgr.so
-system_ext/lib/libdpmfdmgr.so
-system_ext/lib/libdpmframework.so
-system_ext/lib/libdpmtcm.so
--system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
-system/framework/tcmclient.jar
+system_ext/lib64/vendor.qti.hardware.dpmservice@1.1.so
+system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
+
+# DPM
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
@@ -520,25 +521,35 @@ vendor/firmware/a660_zap.mdt
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-# IMS
+# IMS - from rtwo
 -system_ext/app/ImsRcsService/ImsRcsService.apk
+system_ext/app/QtiTelephony/QtiTelephony.apk
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
+system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
+system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
-system_ext/lib64/lib-imsvideocodec.so
-system_ext/lib64/lib-imsvtextutils.so
-system_ext/lib64/lib-imsvt.so
-system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
--system_ext/priv-app/ims/ims.apk|d18a3ec9efd9d70d6479baf96a71d80e31f324a8
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+-system_ext/priv-app/ims/ims.apk
+
+# IMS
 vendor/bin/imsdaemon
 vendor/bin/ims_rtp_daemon
 vendor/etc/init/imsdaemon.rc
@@ -637,7 +648,7 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_vendor.xml
 vendor/etc/media_profiles.xml
 
-# Motorola Telephony
+# Motorola Telephony - from rtwo
 system/etc/permissions/moto-ims-ext.xml:system_ext/etc/permissions/moto-ims-ext.xml
 system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
 system/framework/moto-ims-ext.jar:system_ext/framework/moto-ims-ext.jar
@@ -715,7 +726,7 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# QCRIL
+# QCRIL - from rtwo
 -product/app/uimgbaservice/uimgbaservice.apk
 product/etc/permissions/UimGbaManager.xml
 product/etc/permissions/UimGba.xml
@@ -723,14 +734,14 @@ product/etc/permissions/UimService.xml
 product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
--system_ext/app/QtiTelephony/QtiTelephony.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
-system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/framework/qcrilhook.jar
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+
+# QCRIL
 -vendor/app/IWlanService/IWlanService.apk
 vendor/bin/adpl
 vendor/bin/ATFWD-daemon
@@ -875,15 +886,19 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/lib64/libsoc_helper_jni.so
 vendor/lib64/libsoc_helper.so
 
-# QESD HAL
+# QESD HAL - from rtwo
 system_ext/lib64/vendor.qti.qesdhal@1.0.so
 system_ext/lib64/vendor.qti.qesdhal@1.1.so
+system_ext/lib64/vendor.qti.qesdhal@1.2.so
+system_ext/lib64/vendor.qti.qesdhalaidl-V1-ndk.so
 
-# QMI
+# QMI - from rtwo
 system/etc/permissions/privapp-permissions-qti.xml
 system/etc/sysconfig/qti_whitelist.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
+
+# QMI
 vendor/bin/irsc_util
 vendor/bin/qmipriod
 vendor/etc/init/qmipriod.rc
