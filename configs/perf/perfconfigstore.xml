@@ -33,11 +33,12 @@ ________________________________________________________________________________
 
                 <!--Vendor Properties -->
                 <Prop Name="vendor.debug.enable.lm" Value="true" />
-                <Prop Name="vendor.iop.enable_uxe" Value="1" />
+                <!-- AOSPA Edit: Comment out IOP
+                <Prop Name="vendor.iop.enable_uxe" Value="0" /> 
                 <Prop Name="vendor.enable.prefetch" Value="false" />
                 <Prop Name="vendor.iop.enable_prefetch_ofr" Value="0" />
                 <Prop Name="vendor.perf.iop_v3.enable" Value="false" />
-                <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
+                <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />  -->
                 <Prop Name="vendor.debug.enable.memperfd" Value="true" />
                 <Prop Name="vendor.perf.pfar.enable" Value="1"/>
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1"/>
@@ -82,6 +83,13 @@ ________________________________________________________________________________
                 <Prop Name="vendor.appcompact.compact_throttle_persistent" Value="600000" />
                 <Prop Name="vendor.appcompact.rss_throttle_kb" Value="12000" />
                 <Prop Name="vendor.appcompact.delta_rss_throttle_kb" Value="8000" />
+
+                <!-- AOSPA Edit: Enable Preferred Apps -->
+                <Prop Name="ro.vendor.perf.enable.prefapps" Value="true" />
+                <Prop Name="ro.vendor.perf.count.prefapps" Value="12" />
+                <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="true" />
+                <Prop Name="vendor.prefapps.pkg_retention_mins" Value="28800" />
+                <Prop Name="vendor.prefapps.last_launch_threshold" Value="21600" />
 
     </PerfConfigs>
 </PerfConfigsStore>
