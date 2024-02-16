@@ -504,6 +504,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 # GNSS - from rhodep
 -vendor/app/CACertService/CACertService.apk
 vendor/lib64/libcacertclient.so
+vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libjnihelper.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
