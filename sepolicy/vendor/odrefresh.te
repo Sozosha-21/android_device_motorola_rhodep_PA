@@ -1,2 +1,3 @@
 allow odrefresh aac_drc_prop:file { getattr open };
 allow odrefresh self:capability kill;
+dontaudit odrefresh property_type:file { getattr open read map };
