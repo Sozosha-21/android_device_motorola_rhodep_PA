@@ -49,6 +49,7 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.perf.splh" Value="none"/>
                 <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="10" />
                 <Prop Name="ro.vendor.perf.enable.prekill" Value="false"/>
+                <Prop Name="vendor.perf.expensive_rendering" Value="1" Target="holi" />
 
                 <!--System Properties -->
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="300000" />
