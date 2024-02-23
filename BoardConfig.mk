@@ -54,7 +54,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \
     androidboot.hab.cid=50 \
     androidboot.hab.csv=11 \
-    androidboot.hab.product=corfur \
+    androidboot.hab.product=rhodep \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=4e00000.dwc3 \
@@ -70,7 +70,7 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_RAMDISK_USE_LZ4 := true
 KERNEL_CUSTOM_LLVM := true
 KERNEL_FULL_LLVM := true
-KERNEL_DEFCONFIG := corfur-qgki_defconfig
+KERNEL_DEFCONFIG := rhodep_defconfig
 
 BOARD_VENDOR_KERNEL_MODULES := \
 	$(KERNEL_MODULES_OUT)/apr_dlkm.ko \
@@ -113,23 +113,21 @@ BOARD_VENDOR_KERNEL_MODULES := \
 	$(KERNEL_MODULES_OUT)/moto_f_usbnet.ko \
 	$(KERNEL_MODULES_OUT)/watchdogtest.ko \
 	$(KERNEL_MODULES_OUT)/qpnp_adaptive_charge.ko \
-	$(KERNEL_MODULES_OUT)/fpc1020_mmi.ko \
-	$(KERNEL_MODULES_OUT)/goodix_fod_mmi.ko \
-	$(KERNEL_MODULES_OUT)/wl2864c.ko \
-	$(KERNEL_MODULES_OUT)/wl2866d.ko \
+	$(KERNEL_MODULES_OUT)/focal_fps_mmi.ko \
+	$(KERNEL_MODULES_OUT)/goodix_brl_mmi.ko \
+	$(KERNEL_MODULES_OUT)/wl2868c.ko \
 	$(KERNEL_MODULES_OUT)/cci_intf.ko \
 	$(KERNEL_MODULES_OUT)/touchscreen_mmi.ko \
-	$(KERNEL_MODULES_OUT)/focaltech_v2_mmi.ko \
-	$(KERNEL_MODULES_OUT)/st21nfc.ko \
+	$(KERNEL_MODULES_OUT)/sec_nfc.ko \
 	$(KERNEL_MODULES_OUT)/sx937x_sar.ko \
 	$(KERNEL_MODULES_OUT)/mmi_sys_temp.ko \
-	$(KERNEL_MODULES_OUT)/mmi-smbcharger-iio.ko \
-	$(KERNEL_MODULES_OUT)/mmi_sc8549.ko \
-	$(KERNEL_MODULES_OUT)/fm_ctrl.ko \
-	$(KERNEL_MODULES_OUT)/mmi_parallel_charger_iio.ko
+	$(KERNEL_MODULES_OUT)/mmi-charger.ko \
+	$(KERNEL_MODULES_OUT)/mmi_discrete_charger.ko \
+	$(KERNEL_MODULES_OUT)/mmi_discrete_charger_class.ko \
+	$(KERNEL_MODULES_OUT)/mmi_discrete_turbo_charger.ko
 
 # OTA Assert
-TARGET_OTA_ASSERT_DEVICE := corfur
+TARGET_OTA_ASSERT_DEVICE := rhodep
 
 # Partitions - A/B
 AB_OTA_UPDATER := true
@@ -170,8 +168,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 32)
-BOARD_SUPER_PARTITION_SIZE := 14512291840
-BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 7255617536
+BOARD_SUPER_PARTITION_SIZE := 8613003264
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 8608808960
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 
 # Radio

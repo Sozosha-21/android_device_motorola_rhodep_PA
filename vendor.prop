@@ -52,7 +52,7 @@ ro.incremental.enable=yes
 persist.sys.fuse.passthrough.enable=true
 
 # Google
-ro.opa.device_model_id=motorola-corfur
+ro.opa.device_model_id=motorola-rhodep
 ro.opa.eligible_device=true
 
 # HWUI

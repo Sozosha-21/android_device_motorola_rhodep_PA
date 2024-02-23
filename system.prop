@@ -24,7 +24,7 @@ persist.data.df.ul_mode=5
 debug.hwui.skia_atrace_enabled=false
 
 # Google
-ro.opa.device_model_id=motorola-corfur
+ro.opa.device_model_id=motorola-rhodep
 ro.opa.eligible_device=true
 
 # IMS

@@ -5,5 +5,5 @@
 -->
 <resources>
     <!-- Fingerprint from stock ROM -->
-    <string name="config_stockFingerprint" translatable="false">motorola/corfur_g/corfur:12/S2RUBS32.51-15-9-7/8049b:user/release-keys</string>
+    <string name="config_stockFingerprint" translatable="false">motorola/rhodep_g/rhodep:13/T1SUS33M.1-124-6-4/d30340:user/release-keys</string>
 </resources>

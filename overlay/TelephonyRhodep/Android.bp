@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "SystemUIResCorfur",
+    name: "TelephonyResRhodep",
     product_specific: true,
 }

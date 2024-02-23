@@ -17,8 +17,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.corfur.perf.rc",
-    src: "init.corfur.perf.rc",
+    name: "init.rhodep.perf.rc",
+    src: "init.rhodep.perf.rc",
     sub_dir: "init",
     vendor: true,
 }
@@ -102,8 +102,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ueventd.corfur.rc",
+    name: "ueventd.rhodep.rc",
     filename: "ueventd.rc",
-    src: "ueventd.corfur.rc",
+    src: "ueventd.rhodep.rc",
     device_specific: true,
 }

@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "FrameworksResCorfurAOSPA",
+    name: "FrameworksResRhodep",
     product_specific: true,
 }

@@ -18,6 +18,6 @@
     <bool name="config_wifiSoftapIeee80211axSupported">true</bool>
 
     <!-- Default access point SSID used for tethering -->
-    <string name="wifi_tether_configure_ssid_default" translatable="false">moto g71 5G</string>
+    <string name="wifi_tether_configure_ssid_default" translatable="false">moto g82 5G</string>
     
 </resources>

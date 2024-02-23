@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settings.corfur">
+    coreApp="true"
+    package="com.android.providers.settings.overlay.rhodep">
 
     <overlay
         android:isStatic="true"
         android:priority="800"
-        android:targetPackage="com.android.settings" />
+        android:targetPackage="com.android.providers.settings" />
 </manifest>

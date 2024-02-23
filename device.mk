@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/corfur
+DEVICE_PATH := device/motorola/rhodep
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -75,7 +75,7 @@ BOARD_AVB_ENABLE := true
 
 # Bootloader
 TARGET_BOARD_PLATFORM := holi
-TARGET_BOOTLOADER_BOARD_NAME := corfur
+TARGET_BOOTLOADER_BOARD_NAME := rhodep
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -171,7 +171,7 @@ PRODUCT_COPY_FILES += $(DEVICE_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.default \
-    init.corfur.perf.rc \
+    init.rhodep.perf.rc \
     init.mmi.boot.sh \
     init.mmi.charge_only.rc \
     init.mmi.chipset.rc \
@@ -186,7 +186,7 @@ PRODUCT_PACKAGES += \
     init.qti.qcv.sh \
     init.target.rc \
     init.vendor.st21nfc.rc \
-    ueventd.corfur.rc
+    ueventd.rhodep.rc
 
 # IPACM
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr-legacy/ipacm_vendor_product.mk)
@@ -199,7 +199,7 @@ PRODUCT_PACKAGES += \
 
 # Kernel
 KERNEL_MODULES_INSTALL := dlkm
-KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/corfur/$(KERNEL_MODULES_INSTALL)/lib/modules
+KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/rhodep/$(KERNEL_MODULES_INSTALL)/lib/modules
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -208,7 +208,7 @@ PRODUCT_PACKAGES += \
 
 # Manifests
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/corfur_vendor_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/rhodep_vendor_framework_compatibility_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
 SYSTEM_EXT_MANIFEST_FILES += $(DEVICE_PATH)/configs/vintf/atcmdfwd-saidl.xml
 
@@ -241,14 +241,14 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigResCorfur \
-    FrameworksResCorfur \
-    FrameworksResCorfurAOSPA \
-    SettingsProviderResCorfur \
-    SettingsResCorfur \
-    SystemUIResCorfur \
-    TelephonyResCorfur \
-    WifiResTargetDubai
+    CarrierConfigResRhodep \
+    FrameworksResRhodep \
+    FrameworksResRhodepAOSPA \
+    SettingsProviderResRhodep \
+    SettingsResRhodep \
+    SystemUIResRhodep \
+    TelephonyResRhodep \
+    WifiResTargetRhodep
 
 # Partitions - Dynamic
 PRODUCT_BUILD_ODM_IMAGE := true
@@ -383,4 +383,4 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, hardware/motorola/common.mk)
 
 # Proprietary Vendor
-$(call inherit-product, vendor/motorola/corfur/corfur-vendor.mk)
+$(call inherit-product, vendor/motorola/rhodep/rhodep-vendor.mk)
