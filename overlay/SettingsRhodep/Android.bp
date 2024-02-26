@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "SettingsResRhodep",
-    product_specific: true,
+    name: "SystemUIResRhodep",
+    device_specific: true,
 }
