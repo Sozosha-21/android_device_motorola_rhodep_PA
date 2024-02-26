@@ -335,6 +335,17 @@
         </interface>
         <fqname>@1.0::ILinkLatency/default</fqname>
     </hal>
+    <!-- Perf HAL service -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.perf</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+            <name>IPerf</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- IOP HAL service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.dsp</name>
         <transport>hwbinder</transport>
