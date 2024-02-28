@@ -223,6 +223,12 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/rhode
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
 SYSTEM_EXT_MANIFEST_FILES += $(DEVICE_PATH)/configs/vintf/atcmdfwd-saidl.xml
 
+ODM_MANIFEST_SKUS += b d dn n
+ODM_MANIFEST_B_FILES := $(DEVICE_PATH)/configs/sku/manifest_b.xml
+ODM_MANIFEST_D_FILES := $(DEVICE_PATH)/configs/sku/manifest_d.xml
+ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/configs/sku/manifest_dn.xml
+ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/configs/sku/manifest_n.xml
+
 # Moto Actions
 PRODUCT_PACKAGES += \
     MotoActions
