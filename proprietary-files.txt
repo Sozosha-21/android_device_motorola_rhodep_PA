@@ -62,7 +62,6 @@ vendor/lib/hw/com.dsi.ant@1.0-impl.so
 
 # Audio (Configs) - from rhodep
 etc/audio_effects.conf:vendor/etc/audio_effects.conf
-vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/audio_ext_spkr.conf
 vendor/etc/audio_io_policy.conf
 vendor/etc/audio_platform_info.xml
