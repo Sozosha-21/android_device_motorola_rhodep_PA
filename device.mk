@@ -228,6 +228,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.1.vendor \
+    android.hardware.secure_element@1.2.vendor
+
+PRODUCT_PACKAGES += \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml \
+    qti-telephony-hidl-wrapper-prd \
+    qti_telephony_hidl_wrapper_prd.xml
+
+PRODUCT_BOOT_JARS += \
+    qti-telephony-common
+
 # NFC
 TARGET_USES_ST_AIDL_NFC := true
 $(call inherit-product, hardware/st/nfc/nfc_vendor_product.mk)
