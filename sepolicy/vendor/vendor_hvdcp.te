@@ -1,0 +1,2 @@
+allow vendor_hvdcp ctl_stop_prop:property_service { set };
+allow vendor_hvdcp sysfs:file { read };
