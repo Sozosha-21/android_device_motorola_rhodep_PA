@@ -154,7 +154,7 @@
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="holi" Fps="90"
-            Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 940, 0x40C00000, 2,
+            Resources="0x43010000, 0x26, 0x40800000, 2035, 0x40800100, 1478, 0x40C00000, 2,
                        0x40C74000, 0xC0, 0x40408000, 0x27" />
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="blair" Fps="90"
@@ -162,7 +162,7 @@
                        0x40C74000, 0xC0, 0x40408000, 0x27" />
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="holi" Fps="120"
-            Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 1478, 0x40C00000, 2,
+            Resources="0x43010000, 0x26, 0x40800000, 2054, 0x40800100, 1516, 0x40C00000, 2,
                        0x40C74000, 0xC0, 0x40408000, 0x27" />
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="blair" Fps="120"
@@ -201,7 +201,7 @@
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="holi" Fps="90"
-            Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 940, 0x40C00000, 2,
+            Resources="0x43010000, 0x26, 0x40800000, 2035, 0x40800100, 1478, 0x40C00000, 2,
                        0x40C74000, 0xC0, 0x40408000, 0x27" />
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="blair" Fps="90"
@@ -210,7 +210,7 @@
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="holi" Fps="120"
-            Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 1478, 0x40C00000, 2,
+            Resources="0x43010000, 0x26, 0x40800000, 2054, 0x40800100, 1516, 0x40C00000, 2,
                        0x40C74000, 0xC0, 0x40408000, 0x27" />
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="blair" Fps="120"
