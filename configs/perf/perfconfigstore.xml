@@ -85,6 +85,7 @@ ________________________________________________________________________________
                 <Prop Name="vendor.appcompact.compact_throttle_persistent" Value="600000" />
                 <Prop Name="vendor.appcompact.rss_throttle_kb" Value="12000" />
                 <Prop Name="vendor.appcompact.delta_rss_throttle_kb" Value="8000" />
+                <Prop Name="vendor.perf.horizontalflingboost.enable" Value="true" />
 
                 <!-- AOSPA Edit: Enable Preferred Apps -->
                 <Prop Name="ro.vendor.perf.enable.prefapps" Value="true" />
