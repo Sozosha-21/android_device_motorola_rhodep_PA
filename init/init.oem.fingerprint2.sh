@@ -24,10 +24,10 @@ function log {
 # hal_list: the array contains the hal service name.
 #
 # note: all arrays should have the same size.
-vendor_list=('fpc' 'goodix')
-kernel_so_list=("/vendor/lib/modules/fpc1020_mmi.ko" "/vendor/lib/modules/goodix_fod_mmi.ko")
-kernel_so_name_list=("fpc1020_mmi.ko" "goodix_fod_mmi.ko")
-hal_list=('fps_hal' 'goodix_hal')
+vendor_list=('egis' 'focal')
+kernel_so_list=("/vendor/lib/modules/rbs_fps_mmi.ko" "/vendor/lib/modules/focal_fps_mmi.ko")
+kernel_so_name_list=("rbs_fps_mmi.ko" "focal_fps_mmi.ko")
+hal_list=('ets_hal' 'focal_hal')
 last_vendor_index=`expr ${#vendor_list[@]} - 1`
 vendor_list_size=${#vendor_list[@]}
 
