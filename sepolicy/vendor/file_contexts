@@ -1,18 +1,17 @@
 # A/B partitions
-/dev/block/platform/soc/1d84000\.ufshc/by-name/fsg_[ab]         u:object_r:vendor_modem_efs_partition_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/logo_[ab]        u:object_r:vendor_custom_ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/mdm1m9kefs3_[ab] u:object_r:vendor_efs_boot_dev:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/prov_[ab]        u:object_r:vendor_custom_ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/spss_[ab]        u:object_r:vendor_custom_ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/storsec_[ab]     u:object_r:vendor_custom_ab_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/vendor_boot_[ab] u:object_r:boot_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/sd[df]                   u:object_r:vendor_gpt_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/fsg_[ab]         u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/logo_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/mdm1m9kefs3_[ab] u:object_r:vendor_efs_boot_dev:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/prov_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/spss_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/storsec_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/sdf                      u:object_r:vendor_gpt_block_device:s0
 
 # UFS Devices
-/dev/block/platform/soc/1d84000\.ufshc/by-name/hw               u:object_r:vendor_hw_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/prodpersist      u:object_r:vendor_prodpersist_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/utags            u:object_r:vendor_utags_block_device:s0
-/dev/block/platform/soc/1d84000\.ufshc/by-name/utagsBackup      u:object_r:vendor_utags_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/hw               u:object_r:vendor_hw_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/prodpersist      u:object_r:vendor_prodpersist_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/utags            u:object_r:vendor_utags_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/utagsBackup      u:object_r:vendor_utags_block_device:s0
 
 # Partition Mountpoints
 /(vendor|system/vendor)/fsg                             u:object_r:fsg_file:s0
@@ -45,15 +44,15 @@
 /(vendor|system/vendor)/bin/motobox                     u:object_r:vendor_motobox_exec:s0
 
 # NFC
-/(vendor|system/vendor)/bin/STFlashTool                                       u:object_r:stflashtool_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service\.st        u:object_r:hal_nfc_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service\.sec                	  u:object_r:hal_nfc_default_exec:s0
+/dev/sec-nfc               	u:object_r:nfc_device:s0
 
 # Radio
 /data/vendor/misc/cutback(/.*)?                         u:object_r:cutback_data_file:s0
 /dev/socket/cutback                                     u:object_r:cutback_socket:s0
 
 # Secure Element
-/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service\.st        u:object_r:hal_secure_element_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service        u:object_r:hal_secure_element_default_exec:s0
 
 # Touch
 /sys/devices/platform/soc/a94000\.spi/spi_master/spi0/spi0\.0/touchscreen/primary(/.*)?  u:object_r:vendor_sysfs_touchpanel:s0
@@ -71,6 +70,7 @@
 
 # Vibrator
 /sys/devices/platform/soc/990000.i2c/i2c-1/1-005a/leds/vibrator(/.*)?                     u:object_r:vendor_sysfs_vibrator:s0
+/sys/devices/virtual/vibrator(/.*)?     u:object_r:sysfs_vibrator:s0
 
 # Wakeups
 /sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?                                 u:object_r:sysfs_wakeup:s0
@@ -79,4 +79,4 @@
 /sys/devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/fastrpc/adsprpc-smd/wakeup[0-9]+(/.*)?                               u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/fastrpc/adsprpc-smd-secure/wakeup[0-9]+(/.*)?                        u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:rtc@6100/rtc/rtc0/wakeup[0-9]+(/.*)?   u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-06/1c40000.qcom,spmi:qcom,pmk8350@0:rtc@6100/rtc/rtc0/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
