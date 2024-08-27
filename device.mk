@@ -229,6 +229,10 @@ ODM_MANIFEST_D_FILES := $(DEVICE_PATH)/configs/sku/manifest_d.xml
 ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/configs/sku/manifest_dn.xml
 ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/configs/sku/manifest_n.xml
 
+# Moto NrEnabler
+PRODUCT_PACKAGES += \
+    MotoNrEnabler
+
 # Moto Actions
 PRODUCT_PACKAGES += \
     MotoActions
