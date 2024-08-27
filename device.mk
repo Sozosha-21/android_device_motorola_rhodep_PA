@@ -420,8 +420,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libwfdaac_vendor
 
-# Hardware Motorola
-$(call inherit-product, hardware/motorola/common.mk)
-
 # Proprietary Vendor
 $(call inherit-product, vendor/motorola/rhodep/rhodep-vendor.mk)
